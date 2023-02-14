@@ -9,10 +9,11 @@ import com.gl.ems.entity.Role;
 import com.gl.ems.entity.User;
      
       public interface UserRepository extends JpaRepository<User, Long> {
-       @Query("SELECT u FROM User u WHERE u.username = ?1")	  
-       public User getUserByUsername(String username);
+       @Query("SELECT u FROM User u WHERE u.username = :username")	  
+       public User getUserByUsername(@Param("username") String username);
 
 	    public Role save(Role roles);
 
 		public void save(List<Role> role);
+
 }

@@ -9,8 +9,7 @@ import com.gl.ems.entity.Employee;
 @EnableJpaRepositories
 public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
-//	List<Employee> findByOrderByFirstNameAsc();
-//	List<Employee> findByOrderByFirstNameDesc();
-	List<Employee> findAllByFirstName(String query);
+
+	   List<Employee> findAllByFirstName(String query);
 
 }
